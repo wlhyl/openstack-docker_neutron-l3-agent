@@ -57,8 +57,8 @@ CRUDINI='/usr/bin/crudini'
     $CRUDINI --set /etc/neutron/neutron.conf DEFAULT service_plugins router
     $CRUDINI --set /etc/neutron/neutron.conf DEFAULT allow_overlapping_ips True
 
-    $CRUDINI --set /etc/neutron/l3_agent.ini interface_driver neutron.agent.linux.interface.OVSInterfaceDriver
-    $CRUDINI --set /etc/neutron/l3_agent.ini external_network_bridge
-    $CRUDINI --set /etc/neutron/l3_agent.ini router_delete_namespaces True
+    $CRUDINI --set /etc/neutron/l3_agent.ini DEFAULT interface_driver neutron.agent.linux.interface.OVSInterfaceDriver
+    $CRUDINI --set /etc/neutron/l3_agent.ini DEFAULT external_network_bridge
+    $CRUDINI --set /etc/neutron/l3_agent.ini DEFAULT router_delete_namespaces True
  
 /usr/bin/supervisord -n
